@@ -89,4 +89,12 @@ con_lr2=confusion_matrix(y_test,y_pred_lr2)
 # Accuracy Analysis
 cr_lr2=classification_report(y_test ,y_pred_lr2)
 
+# Training MLP Classifier
+nn_model_2=MLPClassifier(hidden_layer_sizes=[10, 10], activation='logistic', 
+                       random_state=42, max_iter=300)
+nn_model_2.fit(dr_x_train,y_train)
+y_pred_nn=nn_model_2.predict(dr_x_test)
+
+con_nn_model=confusion_matrix(y_test,y_pred_nn)
+
 

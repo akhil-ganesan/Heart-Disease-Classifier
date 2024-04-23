@@ -97,6 +97,7 @@ y_pred_nn=nn_model_2.predict(dr_x_test)
 
 con_nn_model=confusion_matrix(y_test,y_pred_nn)
 
+# from sklearn.metrics import confusion_matrix, ConfusionMatrixDisplay
 # disp = ConfusionMatrixDisplay(confusion_matrix=con_nn_model, 
 # display_labels=nn_model_2.classes_)
 
